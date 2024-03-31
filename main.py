@@ -33,8 +33,8 @@ def allData():
     response=requests.get(fb_url,params=params).json()
     for i in response["media"]["data"]:
         media.append(i['id'])
-    with open("user_data.json",'w+') as file:
-        json.dump([response],file)
+    # with open("user_data.json",'w+') as file:
+    #     json.dump([response],file)
     return response
 
 @app.route('/all_posts_data')
@@ -43,8 +43,8 @@ def all_posts_data():
     for i in media:
         response=requests.get(f"{base_url}/{i}",params=post_params).json()
         post_data.append(response)
-    with open("post_data.json",'w+') as file:
-        json.dump(post_data,file)
+    # with open("post_data.json",'w+') as file:
+    #     json.dump(post_data,file)
     return "DATA ADDED TO JSON FILE....."
 
 
