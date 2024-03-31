@@ -9,14 +9,14 @@ load_dotenv()
 
 app=Flask(__name__)
 
-# API_KEY = os.getenv('api_key')
-# name=os.getenv('name')
-# id=os.getenv('id')
-# page_id=os.getenv('page_id')
-# ig_id=os.getenv('ig_id')
-# access_token=os.getenv('access_token')
-# api_key=os.getenv('api_key')
-# channel_id=os.getenv('channel_id')
+API_KEY = os.getenv('api_key')
+name=os.getenv('name')
+id=os.getenv('id')
+page_id=os.getenv('page_id')
+ig_id=os.getenv('ig_id')
+access_token=os.getenv('access_token')
+api_key=os.getenv('api_key')
+channel_id=os.getenv('channel_id')
 result_size=10
 
 params={"fields":"username,name,media,followers_count,follows_count,media_count,id,ig_id",
