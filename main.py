@@ -123,5 +123,5 @@ def get_yt_data():
     return get_channel_info(channel_id, result_size)
 
 
-if __name__== '__main__':
-    app.run(debug=True)
+# if __name__== '__main__':
+#     app.run(debug=True)
