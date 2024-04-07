@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 import os
 
-API_KEY = "AIzaSyCnmRvrYOQV4RcsF3RvMHrOZoVY8FJkm_4"
+API_KEY = "AIzaSyDZsi7hHAROKYm9z0v2iLdll56tx5HNXtI"
 def get_channel_info(channel_id):
     try:
         youtube = build('youtube', 'v3', developerKey=API_KEY)
