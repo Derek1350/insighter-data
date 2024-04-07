@@ -4,6 +4,7 @@ import os
 from flask import Flask, redirect, jsonify, request, session, url_for
 from dotenv import load_dotenv
 from googleapiclient.discovery import build
+from backend import get_channel_info,get_video_info
 
 load_dotenv()
 
