@@ -1,9 +1,7 @@
 from googleapiclient.discovery import build
 import os
-from datetime import datetime
 
-
-API_KEY = os.environ.get('API_KEY')
+API_KEY = "AIzaSyCnmRvrYOQV4RcsF3RvMHrOZoVY8FJkm_4"
 def get_channel_info(channel_id):
     try:
         youtube = build('youtube', 'v3', developerKey=API_KEY)
@@ -22,14 +20,12 @@ def get_channel_info(channel_id):
             view_count = channel['statistics']['viewCount']
             video_count = channel['statistics']['videoCount']
             creation_date = channel['snippet']['publishedAt']
-            creation_date = datetime.strptime(creation_date, "%Y-%m-%dT%H:%M:%S.%fZ")
-            formatted_date = creation_date.strftime("%d %B %Y, %H:%M:%S UTC")
             resp = {
                         "Title": channel_title,
                         "subscribers":subscriber_count ,
                         "totalViews":view_count,
                         "totalVideos":video_count,
-                        "creationDate": formatted_date
+                        "creationDate": creation_date
                     }
             return resp
         else:
