@@ -121,3 +121,7 @@ def get_video_info(youtube, video_id):
 @app.route(f"/get_channel_info/{channel_id}/{result_size}", methods=['GET'])
 def get_yt_data():
     return get_channel_info(channel_id, result_size)
+        
+@app.route(f"/get_video_info/{channel_id}/{result_size}", methods=['GET'])
+def get_video_info():
+    return get_video_info(channel_id, result_size)        
